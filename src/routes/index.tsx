@@ -1,5 +1,5 @@
 import { useTheme } from "native-base";
-import * as Linking from "expo-linking";
+
 import {
   DefaultTheme,
   LinkingOptions,
@@ -27,14 +27,6 @@ export function Routes() {
 
   const theme = DefaultTheme;
   theme.colors.background = colors.gray[700];
-
-  const deepLinking = Linking.createURL("details", {
-    queryParams: {
-      productId: "7",
-    },
-  });
-
-  console.log(deepLinking);
 
   return (
     <NavigationContainer theme={theme} linking={linking}>
